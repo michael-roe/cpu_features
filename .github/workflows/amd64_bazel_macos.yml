@@ -1,0 +1,23 @@
+name: amd64 Bazel macOS
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # min hours day(month) month day(week)
+    - cron: '0 0 7,22 * *'
+
+jobs:
+  # Building using the github runner environement directly.
+  bazel:
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install Bazel
+        run: |
+          brew update
+          #brew install bazel
+          bazel --version
+      - name: Test
+        run: bazel test -s --verbose_failures //...
