@@ -69,7 +69,11 @@ VPE : 0
   const auto info = GetMipsInfo();
   EXPECT_FALSE(info.features.msa);
   EXPECT_TRUE(info.features.eva);
+  EXPECT_FALSE(info.features.r6);
   EXPECT_TRUE(info.features.mips16);
+  EXPECT_FALSE(info.features.mdmx);
+  EXPECT_FALSE(info.features.mips3d);
+  EXPECT_FALSE(info.features.smart);
   EXPECT_TRUE(info.features.dsp);
 }
 
