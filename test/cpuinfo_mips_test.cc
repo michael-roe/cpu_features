@@ -69,6 +69,8 @@ VPE : 0
   const auto info = GetMipsInfo();
   EXPECT_FALSE(info.features.msa);
   EXPECT_TRUE(info.features.eva);
+  EXPECT_TRUE(info.features.mips16);
+  EXPECT_TRUE(info.features.dsp);
 }
 
 TEST(CpuinfoMipsTest, AR7161) {
@@ -95,6 +97,7 @@ VCEI exceptions         : not available
   const auto info = GetMipsInfo();
   EXPECT_FALSE(info.features.msa);
   EXPECT_FALSE(info.features.eva);
+  EXPECT_TRUE(info.features.mips16);
 }
 
 TEST(CpuinfoMipsTest, Goldfish) {

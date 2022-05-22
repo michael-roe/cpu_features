@@ -21,11 +21,18 @@
 CPU_FEATURES_START_CPP_NAMESPACE
 
 typedef struct {
-  int msa : 1;  // MIPS SIMD Architecture
-                // https://www.mips.com/products/architectures/ase/simd/
-  int eva : 1;  // Enhanced Virtual Addressing
-                // https://www.mips.com/products/architectures/mips64/
-  int r6 : 1;   // True if is release 6 of the processor.
+  int msa : 1;    // MIPS SIMD Architecture
+                  // https://www.mips.com/products/architectures/ase/simd/
+  int eva : 1;    // Enhanced Virtual Addressing
+                  // https://www.mips.com/products/architectures/mips64/
+  int r6 : 1;     // True if is release 6 of the processor.
+  int crc32 : 1;  // Cyclic Redundancy Check computation
+  int mips16 : 1; // Compressed instructions
+  int mdmx : 1;
+  int mips3d : 1; // 3D graphics acceleration
+  int smart : 1;  // Smart-card cryptography
+  int dsp : 1;    // Digital Signal Processing
+		  // https://www.mips.com/products/architectures/ase/dsp/
 
   // Make sure to update MipsFeaturesEnum below if you add a field here.
 } MipsFeatures;
@@ -43,6 +50,12 @@ typedef enum {
   MIPS_MSA,
   MIPS_EVA,
   MIPS_R6,
+  MIPS_CRC32,
+  MIPS_MIPS16,
+  MIPS_MDMX,
+  MIPS_MIPS3D,
+  MIPS_SMART,
+  MIPS_DSP,
   MIPS_LAST_,
 } MipsFeaturesEnum;
 
