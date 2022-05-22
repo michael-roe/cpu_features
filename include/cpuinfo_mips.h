@@ -29,12 +29,12 @@ typedef struct {
   int mips16 : 1; // Compressed instructions
   int mdmx : 1;   // MIPS Digital Media Extension
   int mips3d : 1; // 3D graphics acceleration
-		  // MIPS® Architecture for Programmers, Volume IV-c
+                  // MIPS(r) Architecture for Programmers, Volume IV-c
   int smart : 1;  // Smart-card cryptography
-		  // MIPS® Architecture for Programmers, Volume IV-d
+                  // MIPS(r) Architecture for Programmers, Volume IV-d
   int dsp : 1;    // Digital Signal Processing
-		  // MIPS® Architecture for Programmers, Volume IV-e
-		  // https://www.mips.com/products/architectures/ase/dsp/
+                  // MIPS(r) Architecture for Programmers, Volume IV-e
+                  // https://www.mips.com/products/architectures/ase/dsp/
 
   // Make sure to update MipsFeaturesEnum below if you add a field here.
 } MipsFeatures;
