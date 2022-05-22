@@ -26,7 +26,6 @@ typedef struct {
   int eva : 1;    // Enhanced Virtual Addressing
                   // https://www.mips.com/products/architectures/mips64/
   int r6 : 1;     // True if is release 6 of the processor.
-  int crc32 : 1;  // Cyclic Redundancy Check computation
   int mips16 : 1; // Compressed instructions
   int mdmx : 1;
   int mips3d : 1; // 3D graphics acceleration
@@ -50,7 +49,6 @@ typedef enum {
   MIPS_MSA,
   MIPS_EVA,
   MIPS_R6,
-  MIPS_CRC32,
   MIPS_MIPS16,
   MIPS_MDMX,
   MIPS_MIPS3D,
